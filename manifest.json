@@ -1,0 +1,21 @@
+{
+  "name": "Aurora Exporter",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Let's you export your submissions from Aurora.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://aurora.iguw.tuwien.ac.at/*/challenge/challenge*"
+      ],
+      "js": [
+        "FileSaver.min.js",
+        "jszip.min.js",
+        "jszip-utils.min.js",
+        "inject.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
